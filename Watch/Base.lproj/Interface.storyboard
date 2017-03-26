@@ -128,7 +128,7 @@
         <!--CheckIn-->
         <scene sceneID="EQu-dr-dbn">
             <objects>
-                <controller identifier="CheckIn" id="yNo-si-vuH">
+                <controller identifier="CheckIn" id="yNo-si-vuH" customClass="CheckInInterfaceController" customModule="Watch_Extension">
                     <items>
                         <group width="1" height="1" alignment="center" contentMode="center" layout="vertical" id="BYJ-Xq-OXe">
                             <items>
@@ -145,9 +145,27 @@
                                         </label>
                                     </items>
                                 </group>
+                                <button alignment="center" verticalAlignment="center" id="dlx-8x-qCN">
+                                    <group key="contentGroup" width="78" height="78" alignment="left" radius="39" id="1er-zm-ng1">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Check In" id="nPT-tf-e5N">
+                                                <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <action selector="checkInButtonTapped" destination="yNo-si-vuH" id="a18-nK-CdM"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="backgroundGroup" destination="BYJ-Xq-OXe" id="UXf-rb-mpW"/>
+                        <outlet property="destinationLabel" destination="CbL-yS-aRX" id="RTP-s8-M6S"/>
+                        <outlet property="originLabel" destination="1fl-h0-MIk" id="HrQ-gr-BCq"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="300" y="-191"/>
