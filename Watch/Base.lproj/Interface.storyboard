@@ -12,11 +12,11 @@
         <!--Air Aber-->
         <scene sceneID="VNu-fQ-HB2">
             <objects>
-                <controller identifier="Schedule" title="Air Aber" id="F3v-1J-qWy">
+                <controller identifier="Schedule" title="Air Aber" id="F3v-1J-qWy" customClass="ScheduleInterfaceController" customModule="Watch_Extension">
                     <items>
                         <table alignment="left" id="vOp-5u-oMf">
                             <items>
-                                <tableRow identifier="FlightRow" id="cP8-VQ-pQ3">
+                                <tableRow identifier="FlightRow" id="cP8-VQ-pQ3" customClass="FlightRowController" customModule="Watch_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="rv5-0E-Nmt">
                                         <items>
                                             <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="xnK-wW-f4f">
@@ -53,18 +53,29 @@
                                             </group>
                                         </items>
                                     </group>
+                                    <connections>
+                                        <outlet property="destinationLabel" destination="JSQ-j4-Hrt" id="4a0-Te-p58"/>
+                                        <outlet property="flightNumberLabel" destination="R8t-a7-kIN" id="nyU-dF-Nxu"/>
+                                        <outlet property="originLabel" destination="mVr-lB-SMb" id="0yU-qQ-zts"/>
+                                        <outlet property="planeImage" destination="M6L-jk-nXw" id="IYG-Ix-S7P"/>
+                                        <outlet property="separator" destination="xnK-wW-f4f" id="1yp-EV-hfZ"/>
+                                        <outlet property="statusLabel" destination="7hs-NS-NrX" id="gRR-PN-bZK"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="flightTable" destination="vOp-5u-oMf" id="xTd-ed-aNd"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="-234" y="-187"/>
         </scene>
-        <!--Flight Interface Controller-->
+        <!--Flight-->
         <scene sceneID="5ad-HR-81u">
             <objects>
-                <controller id="A7t-L6-9pS" customClass="FlightInterfaceController" customModule="Watch_Extension">
+                <controller identifier="Flight" id="A7t-L6-9pS" customClass="FlightInterfaceController" customModule="Watch_Extension">
                     <items>
                         <group width="1" alignment="left" id="Hqf-b6-eh5">
                             <items>
@@ -113,6 +124,33 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="55" y="-190"/>
+        </scene>
+        <!--CheckIn-->
+        <scene sceneID="EQu-dr-dbn">
+            <objects>
+                <controller identifier="CheckIn" id="yNo-si-vuH">
+                    <items>
+                        <group width="1" height="1" alignment="center" contentMode="center" layout="vertical" id="BYJ-Xq-OXe">
+                            <items>
+                                <group height="30" alignment="center" spacing="4" id="aZJ-x9-nLH">
+                                    <items>
+                                        <label alignment="left" verticalAlignment="center" text="MAN" id="1fl-h0-MIk">
+                                            <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                        </label>
+                                        <imageView width="24" height="20" alignment="left" verticalAlignment="center" image="Plane" id="Wh6-Yl-aQz">
+                                            <color key="tintColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </imageView>
+                                        <label alignment="left" verticalAlignment="center" text="SFO" id="CbL-yS-aRX">
+                                            <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="300" y="-191"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
