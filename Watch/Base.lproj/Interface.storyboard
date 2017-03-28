@@ -170,6 +170,36 @@
             </objects>
             <point key="canvasLocation" x="300" y="-191"/>
         </scene>
+        <!--BoardingPass-->
+        <scene sceneID="4lU-Sw-SNR">
+            <objects>
+                <controller identifier="BoardingPass" id="QZk-lL-5BS" customClass="BoardingPassInterfaceController" customModule="Watch_Extension">
+                    <items>
+                        <group height="30" alignment="center" spacing="4" id="cJy-HB-9ZU">
+                            <items>
+                                <label alignment="left" verticalAlignment="center" text="MAN" id="MjW-XA-7Vv">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                </label>
+                                <imageView width="24" height="20" alignment="left" verticalAlignment="center" image="Plane" id="8vR-bf-FSA">
+                                    <color key="tintColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </imageView>
+                                <label alignment="left" verticalAlignment="center" text="SFO" id="kCF-rR-II5">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                </label>
+                            </items>
+                        </group>
+                        <imageView width="66" height="66" alignment="center" verticalAlignment="center" image="Activity" animationDuration="1" id="BL1-KM-uCH"/>
+                    </items>
+                    <edgeInsets key="margins" left="1" right="1" top="6" bottom="0.0"/>
+                    <connections>
+                        <outlet property="boardingPassImage" destination="BL1-KM-uCH" id="mDD-Sw-eCf"/>
+                        <outlet property="destinationLabel" destination="kCF-rR-II5" id="Kc3-bg-YFU"/>
+                        <outlet property="originLabel" destination="MjW-XA-7Vv" id="Lo7-sJ-Qdw"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="538" y="-191"/>
+        </scene>
     </scenes>
     <color key="tintColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
 </document>
